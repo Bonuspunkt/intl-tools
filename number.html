@@ -4,15 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>QUnit Example</title>
-    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-2.4.0.css">
-	<script src="https://unpkg.com/getlibs"></script>
+    <link rel="stylesheet" href="node_modules/qunitjs/qunit/qunit.css">
 </head>
 <body>
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
 
-	<script>
-		System.import('./number.test.js');
-	</script>
+    <script src="node_modules/qunitjs/qunit/qunit.js"></script>
+    <script src="number.js"></script>
+    <script src="number.test.js"></script>
 </body>
 </html>

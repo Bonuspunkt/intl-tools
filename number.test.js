@@ -1,6 +1,3 @@
-const QUnit = require('qunitjs')
-const number = require('./number');
-
 QUnit.module('number', hooks => {
 
     ['de', 'de-AT', 'ko', 'jp', 'hi-IN'].forEach(locale => {
@@ -57,5 +54,3 @@ QUnit.module('number', hooks => {
         assert.equal(number.significantDigits(Math.PI), 16);
     });
 });
-
-QUnit.start();

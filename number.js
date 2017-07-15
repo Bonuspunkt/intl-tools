@@ -13,7 +13,7 @@ const getPattern = (locale) => {
     })();
 };
 
-module.exports = {
+const exports = {
     parse(string, locale = 'en-US') {
         if (string === '') { return null; }
         const { group, seperator } = getPattern(locale);
@@ -33,3 +33,10 @@ module.exports = {
         return Math.floor(Math.log10(pure)) + 1;
     }
 };
+
+
+if (typeof module !== 'undefined') {
+    module.exports = exports;
+} else {
+    this.number = exports;
+}
