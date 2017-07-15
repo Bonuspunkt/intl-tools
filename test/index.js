@@ -20,10 +20,12 @@ chromeLauncher.launch({
     await Page.enable();
     await DOM.enable();
 
-    Page.navigate({ url: 'http://localhost:8080/number.html' })
+    Page.navigate({ url: 'http://localhost:8080/number.html' });
+
+    let timeoutId;
 
     await new Promise((resolve, reject) => {
-        setTimeout(() => reject('timeout'), 300e3);
+        timeoutId = setTimeout(() => reject('timeout'), 30e3);
 
 
         Page.loadEventFired(async () => {
@@ -57,6 +59,7 @@ chromeLauncher.launch({
         process.exit(1);
     })
     .then(() => {
+        clearTimeout(timeoutId);
         protocol.close();
         chrome.kill();
     });
