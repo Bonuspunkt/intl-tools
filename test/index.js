@@ -59,6 +59,6 @@ chromeLauncher.launch({
     });
 
 }).catch(ex => {
+    console.error(ex);
     process.exit(1);
-    console.log(ex);
 });
