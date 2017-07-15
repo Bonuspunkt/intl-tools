@@ -23,7 +23,7 @@ chromeLauncher.launch({
     Page.navigate({ url: 'http://localhost:8080/number.html' })
 
     await new Promise((resolve, reject) => {
-        setTimeout(() => reject('timeout'), 30e3);
+        setTimeout(() => reject('timeout'), 300e3);
 
         Page.loadEventFired(async () => {
 
