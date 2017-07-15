@@ -9,7 +9,8 @@ addons:
   chrome: stable
 
 before_script:
-    - npx http-server -p 8080 &  # start a Web server
+    - npm i http-server -g
+    - http-server -p 8080 &  # start a Web server
     - sleep 3 # give Web server some time to bind to sockets, etc
 
 cache:
