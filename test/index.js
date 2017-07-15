@@ -8,7 +8,7 @@ function wait(duration = 1e3) {
 
 
 chromeLauncher.launch({
-    logLevel: 'silent',
+    //logLevel: 'silent',
     chromeFlags: [
         '--disable-gpu',
         '--headless'
@@ -25,7 +25,11 @@ chromeLauncher.launch({
     await new Promise((resolve, reject) => {
         setTimeout(() => reject('timeout'), 300e3);
 
+
         Page.loadEventFired(async () => {
+
+            console.log('page loaded')
+
 
             const { root: { nodeId } } = await DOM.getDocument();
 
