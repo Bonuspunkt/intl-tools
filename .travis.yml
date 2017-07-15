@@ -3,6 +3,8 @@ node_js:
     - "8"
     - "node"
 
+dist: trusty
+
 addons:
   chrome: stable
 
