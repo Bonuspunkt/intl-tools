@@ -7,7 +7,7 @@ addons:
   chrome: stable
 
 before_script:
-    - rackup  # start a Web server
+    - npx http-server -p 8080 &  # start a Web server
     - sleep 3 # give Web server some time to bind to sockets, etc
 
 cache:
