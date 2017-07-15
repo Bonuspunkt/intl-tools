@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+    - "8"
+    - "node"
+
+addons:
+  chrome: stable
+
+before_script:
+    - rackup  # start a Web server
+    - sleep 3 # give Web server some time to bind to sockets, etc
+
+cache:
+    directories:
+        - ~/.npm
