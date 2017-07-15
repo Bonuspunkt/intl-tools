@@ -58,4 +58,7 @@ chromeLauncher.launch({
         chrome.kill();
     });
 
+}).catch(ex => {
+    process.exit(1);
+    console.log(ex);
 });
