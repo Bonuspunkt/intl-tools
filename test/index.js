@@ -23,7 +23,7 @@ chromeLauncher.launch({
     Page.navigate({ url: 'http://localhost:8080/number.html' })
 
     await new Promise((resolve, reject) => {
-        setTimeout(reject, 30e3);
+        setTimeout(() => reject('timeout'), 30e3);
 
         Page.loadEventFired(async () => {
 
@@ -38,19 +38,18 @@ chromeLauncher.launch({
             const banner = await DOM.resolveNode(bannerNodeId);
             const { attributes } = await DOM.getAttributes(bannerNodeId);
 
-
             if (attributes.includes('qunit-pass')) {
                 resolve();
             } else {
-                reject();
+                reject(Error('did not pass'));
             }
         });
     })
     .then(() => {
         console.log('success');
     })
-    .catch(() => {
-        console.log('failed');
+    .catch(ex => {
+        console.log(ex);
         process.exit(1);
     })
     .then(() => {
