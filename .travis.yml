@@ -9,8 +9,7 @@ addons:
   chrome: stable
 
 before_script:
-    - npm i npm -g # update npm to latest version so npx is included
-    - npx http-server -p 8080 &  # start a Web server
+    - npm run devServer & # start Web server
     - sleep 3 # give Web server some time to bind to sockets, etc
 
 cache:

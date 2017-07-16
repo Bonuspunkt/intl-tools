@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --hot",
     "test": "node test",
     "lint": "eslint ."
   },
@@ -12,9 +13,12 @@
   "devDependencies": {
     "chrome-launcher": "^0.3.1",
     "chrome-remote-interface": "^0.24.2",
+    "css-loader": "^0.28.4",
     "eslint": "^4.2.0",
-    "http-server": "^0.10.0",
-    "qunitjs": "^2.4.0"
+    "qunitjs": "^2.4.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {}
 }

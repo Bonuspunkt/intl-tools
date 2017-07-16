@@ -20,7 +20,7 @@ chromeLauncher.launch({
     await Page.enable();
     await DOM.enable();
 
-    Page.navigate({ url: 'http://localhost:8080/number.html' });
+    Page.navigate({ url: 'http://localhost:8080/' });
 
     let timeoutId;
 
