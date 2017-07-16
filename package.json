@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "devServer": "webpack-dev-server --hot",
-    "test": "node test",
+    "test": "node test/index.js",
     "lint": "eslint ."
   },
   "author": "bonuspunkt",
